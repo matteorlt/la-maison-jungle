@@ -1,3 +1,5 @@
+import '../styles/Cart.css'
+
 function Cart() {
   const plantes = [
     { nom: "Monstera", prix: 8 },
@@ -6,7 +8,7 @@ function Cart() {
   ];
   const total = plantes.reduce((acc, plante) => acc + plante.prix, 0);
   return (
-    <div>
+    <div className='lmj-cart'>
       <h2>Mon panier</h2>
       <ul>
         {plantes.map((plante, index) => (
