@@ -1,26 +1,20 @@
 import '../styles/Cart.css'
 
 function Cart() {
-  const plantes = [
-    { nom: "Monstera", prix: 8 },
-    { nom: "Lierre", prix: 10 },
-    { nom: "Bouquet de fleurs", prix: 15 },
-  ];
-  const total = plantes.reduce((acc, plante) => acc + plante.prix, 0);
-  return (
-    <div className='lmj-cart'>
-      <h2>Mon panier</h2>
-      <ul>
-        {plantes.map((plante, index) => (
-          <li key={index}>
-            {plante.nom} - {plante.prix}€
-          </li>
-        ))}
-      </ul>
-      <p>
-        <strong>Total : {total}€</strong>
-      </p>
-    </div>
-  );
+	const monsteraPrice = 8
+	const ivyPrice = 10
+	const flowerPrice = 15
+	return (
+		<div className='lmj-cart'>
+			<h2>Panier</h2>
+			<ul>
+				<li>Monstera : {monsteraPrice}€</li>
+				<li>Lierre : {ivyPrice}€</li>
+				<li>Fleurs : {flowerPrice}€</li>
+			</ul>
+			Total : {monsteraPrice + ivyPrice + flowerPrice}€
+		</div>
+	)
 }
-export default Cart;
+
+export default Cart
