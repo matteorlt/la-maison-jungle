@@ -1,5 +1,6 @@
 import {plantList} from '../datas/plantList.js';
 import '../styles/ShoppingList.css'
+import CareScale from "./CareScale.js";
 
 function ShoppingList() {
 	return (
@@ -8,6 +9,7 @@ function ShoppingList() {
 				<li key={plant.id}>
 					{plant.name} {' '}
 					{plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
+					<CareScale scaleValue={plant.light} />
 				</li>
 			))}
 		</ul>
@@ -15,3 +17,6 @@ function ShoppingList() {
 }
 
 export default ShoppingList;
+
+
+
