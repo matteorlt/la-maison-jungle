@@ -1,7 +1,7 @@
-import Banner from '../components/Banner'
+import Banner from './Banner'
 import logo from '../assets/logo.png'
 // import Cart from './Cart'
-import ShoppingList from '../components/ShoppingList.js'
+import ShoppingList from './ShoppingList'
 
 function App() {
 	return (

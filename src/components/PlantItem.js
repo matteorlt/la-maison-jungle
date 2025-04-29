@@ -1,22 +1,17 @@
-import NamePlant from './NamePlant.js';
-import IdPlant from './IdPlant.js';
-import CareScale from './CareScale.js';
-import Cover from './Cover.js';
+import CareScale from './CareScale'
+import '../styles/PlantItem.css'
 
-function PlantItem({ name, cover, id, light, water, isBestSale }) {
-    return (
-      <div className="lmj-plant-item">
-        {isBestSale && <span>🔥</span>}
-        <NamePlant scaleValue={name} />
-        
-        <Cover scaleValue={cover} />
-        
-        <CareScale careType="water" scaleValue={water} />
-        <CareScale careType="light" scaleValue={light} />
-        <IdPlant scaleValue={id} />
-      </div>
-    );
-  }
-  
+function PlantItem({ id, cover, name, water, light }) {
+	return (
+		<li key={id} className='lmj-plant-item'>
+			<img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
+			{name}
+			<div>
+				<CareScale careType='water' scaleValue={water} />
+				<CareScale careType='light' scaleValue={light} />
+			</div>
+		</li>
+	)
+}
 
-export default PlantItem;
+export default PlantItem

@@ -1,7 +1,8 @@
-import plantImg from '../assets/img/monstera.jpg'
+import plantImg from '../assets/img/monstera.jpg';
+import '../styles/PlantItem.css'
 
-function Cover({ plantImg }) {
-    return <img src={plantImg} alt={"Erreur"} />;
-  }
-  
-  export default Cover;
+function Cover() {
+    return <img className="lmj-plant-item-cover" src={plantImg} alt="Plante" />;
+}
+
+export default Cover;
