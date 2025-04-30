@@ -26,6 +26,7 @@ function ShoppingList({ cart, updateCart }) {
 		} else {
 			updateCart([...cart, { name, price, amount: 1 }])
 		}
+		
 	}
 
 	return (
